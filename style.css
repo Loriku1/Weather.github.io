@@ -1,0 +1,661 @@
+.index {
+    margin:0 ;
+    font-family: sans-serif;
+    background: #111;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+h1, h3{
+    font-weight: 400;
+}
+.Lz-weather-app{
+    min-height: 100vh;
+    background-image: url(./images/day.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #fff;
+    position: relative;
+    transition: 500ms;
+    opacity: 1; 
+}
+
+.Lz-weather-app::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    z-index: 0;
+}
+
+.Lz-container{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 2em 3em 4em 3em;
+}
+
+.Lz-container > div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.Lz-city-item,
+.Lz-temp,
+.Lz-weather {
+    margin:0 1em ;
+}
+
+.Lz-city-time h1{
+    margin: 0;
+    margin-bottom: 0.2em;
+    font-size: 3em;
+}
+
+.Lz-temp{
+    font-size: 7em;
+    margin: 0;
+}
+
+.Lz-weather img{
+    display: block;
+    margin: 0.5em 0;
+}
+
+.Lz-panel{
+    position: absolute;
+    width: 40%;
+    height: 100%;
+    top:0;
+    right: 0;
+    background: rgba(110, 110, 110, 0.25);
+    box-shadow: 0 8px 32px 0
+    rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    z-index: 1;
+    padding: 3em 2em;
+    overflow-y: scroll;
+}
+
+.Lz-panel form{
+    margin-bottom: 3em;
+}
+
+.Lz-submit{
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 1.5em;
+    margin: 0;
+    border: none;
+    outline: none;
+    background: #fa6d1b;
+    color: #fff;
+    cursor: pointer;
+    font-size: 1.2em;
+    transition: 0.4s;
+}
+.Lz-submit img{
+    width: 20px;
+    height: auto;
+    margin: auto;
+    border-radius: 30%;
+}
+
+.Lz-submit:hover{
+    background: #fff !important;
+    color: #000;
+}
+
+
+
+.Lz-panel ul{
+    padding: 0 0 1em 0;
+    margin: 2em 0;
+    border-bottom: 1px #ccc solid;
+}
+
+.Lz-panel ul li {
+    color: #ccc;
+    margin: 2.5em 0;
+}
+
+.Lz-panel ul h4{
+    margin: 3em 0;
+}
+
+.Lz-city{
+    display: block;
+    cursor: pointer;
+}
+.Lz-city a{
+    text-decoration: none;
+    color: black;
+}
+.Lz-city a:hover{
+    color: #fff;
+}
+.Lz-details li{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+/*Per index.html deri ktu*/
+
+.prishtine{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(238, 237, 237, 0.438);
+    color: rgb(105, 104, 104);
+    font-family: sans-serif;
+}
+.container
+{
+    width: fit-content;
+}
+.card{
+    padding: 1.2rem 3rem 1rem 3rem;
+    margin: 1rem;
+    border-radius: 1.5rem;
+    border-color: rgba(238, 237, 237, 0.438);
+    box-shadow: 5px 8px 10px #80808033;
+}
+@media(max-width:767px){
+    .card{
+        height: 10rem;
+        padding: 1.5rem 1.5rem 1rem 1.5rem;
+    }
+}
+.carousel-indicators li {
+    width: 5px;
+    height: 6px;
+    border-radius: 100%;
+    opacity: 0.2;
+    background-color: #000000;
+}
+.carousel-indicators{
+    margin-bottom: 0;
+}
+.temp{
+    font-size: 5rem;
+    color: rgb(57, 57, 58);
+}
+.card-1{
+    background: linear-gradient(to right, #ffffff 50%, rgba(241, 224, 190, 0.507));
+}
+@media(max-width:767px)
+{
+    .temp{
+        font-size: 3rem;
+    }
+}
+.location{
+    margin-bottom: 1.5rem;
+}
+@media(max-width:767px)
+{
+    .location{
+        font-size: 0.75rem;
+    }
+}
+.img-fluid{
+    float: right;
+    width: 65%;
+    display: flex;
+    align-items: center;
+}
+.row2 .img-fluid{
+    margin: 10% 0;
+    opacity: 0.5;
+    width: 40%;
+}
+.card-2 .row{
+    justify-content: center;
+}
+.card-3 .row{
+    justify-content: center;
+}
+.row1{
+    font-size: 0.7rem;
+    font-weight: bold;
+    color: black;
+}
+.row3{
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: black;
+}
+@media(max-width:400px)
+{
+    .row3{
+        font-size: 0.7rem;
+        font-weight: bold;
+        color: black;
+    }
+}
+@media(max-width:320px)
+{
+    .row3{
+        font-size: 0.6rem;
+        font-weight: bold;
+        color: black;
+    }
+}
+.row4{
+    font-size: 0.6rem;
+    color: rgb(196, 196, 196);
+    margin: 5% 0 2.5rem;
+}
+.card-3 .row3{
+    margin: 5% 0 2.5rem;
+}
+.col{
+    overflow: visible;
+}
+.row{
+    overflow: visible;
+}
+.clock{
+    font-size: 50px;
+ }
+ /*Per prishine.html deri ktu*/
+
+ .mitrovice{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(238, 237, 237, 0.438);
+    color: rgb(105, 104, 104);
+    font-family: sans-serif;
+ }
+ .container
+ {
+    width: fit-content;
+ }
+ .card{
+    padding: 1.2rem 3rem 1rem 3rem;
+    margin: 1rem;
+    border-radius: 1.5rem;
+    border-color: rgba(238, 237, 237, 0.438);
+    box-shadow: 5px 8px 10px #80808033;
+ }
+ @media(max-width:767px){
+    .card{
+        height: 10rem;
+        padding: 1.5rem 1.5rem 1rem 1.5rem;
+    }
+ }
+ .carousel-indicators li {
+    width: 5px;
+    height: 6px;
+    border-radius: 100%;
+    opacity: 0.2;
+    background-color: #000000;
+ }
+ .carousel-indicators{
+    margin-bottom: 0;
+ }
+ .temp{
+    font-size: 5rem;
+    color: rgb(57, 57, 58);
+ }
+ .card-1{
+    background: linear-gradient(to right, #ffffff 50%, rgba(241, 224, 190, 0.507));
+ }
+ @media(max-width:767px)
+ {
+    .temp{
+        font-size: 3rem;
+    }
+ }
+ .location{
+    margin-bottom: 1.5rem;
+ }
+ @media(max-width:767px)
+ {
+    .location{
+        font-size: 0.75rem;
+    }
+ }
+ .img-fluid{
+    float: right;
+    width: 65%;
+    display: flex;
+    align-items: center;
+ }
+ .row2 .img-fluid{
+    margin: 10% 0;
+    opacity: 0.5;
+    width: 40%;
+ }
+ .card-2 .row{
+    justify-content: center;
+ }
+ .card-3 .row{
+    justify-content: center;
+ }
+ .row1{
+    font-size: 0.7rem;
+    font-weight: bold;
+    color: black;
+ }
+ .row3{
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: black;
+ }
+ @media(max-width:400px)
+ {
+    .row3{
+        font-size: 0.7rem;
+        font-weight: bold;
+        color: black;
+    }
+ }
+ @media(max-width:320px)
+ {
+    .row3{
+        font-size: 0.6rem;
+        font-weight: bold;
+        color: black;
+    }
+ }
+ .row4{
+    font-size: 0.6rem;
+    color: rgb(196, 196, 196);
+    margin: 5% 0 2.5rem;
+ }
+ .card-3 .row3{
+    margin: 5% 0 2.5rem;
+ }
+ .col{
+    overflow: visible;
+ }
+ .row{
+    overflow: visible;
+ }
+ .clock{
+    font-size: 50px;
+ }
+ /*Per mitrovice.html deri ktu*/
+
+ .gjakove{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(238, 237, 237, 0.438);
+    color: rgb(105, 104, 104);
+    font-family: sans-serif;
+}
+.container
+{
+    width: fit-content;
+}
+.card{
+    padding: 1.2rem 3rem 1rem 3rem;
+    margin: 1rem;
+    border-radius: 1.5rem;
+    border-color: rgba(238, 237, 237, 0.438);
+    box-shadow: 5px 8px 10px #80808033;
+}
+@media(max-width:767px){
+    .card{
+        height: 10rem;
+        padding: 1.5rem 1.5rem 1rem 1.5rem;
+    }
+}
+.carousel-indicators li {
+    width: 5px;
+    height: 6px;
+    border-radius: 100%;
+    opacity: 0.2;
+    background-color: #000000;
+}
+.carousel-indicators{
+    margin-bottom: 0;
+}
+.temp{
+    font-size: 5rem;
+    color: rgb(57, 57, 58);
+}
+.card-1{
+    background: linear-gradient(to right, #ffffff 50%, rgba(241, 224, 190, 0.507));
+}
+@media(max-width:767px)
+{
+    .temp{
+        font-size: 3rem;
+    }
+}
+.location{
+    margin-bottom: 1.5rem;
+}
+@media(max-width:767px)
+{
+    .location{
+        font-size: 0.75rem;
+    }
+}
+.img-fluid{
+    float: right;
+    width: 65%;
+    display: flex;
+    align-items: center;
+}
+.row2 .img-fluid{
+    margin: 10% 0;
+    opacity: 0.5;
+    width: 40%;
+}
+.card-2 .row{
+    justify-content: center;
+}
+.card-3 .row{
+    justify-content: center;
+}
+.row1{
+    font-size: 0.7rem;
+    font-weight: bold;
+    color: black;
+}
+.row3{
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: black;
+}
+@media(max-width:400px)
+{
+    .row3{
+        font-size: 0.7rem;
+        font-weight: bold;
+        color: black;
+    }
+}
+@media(max-width:320px)
+{
+    .row3{
+        font-size: 0.6rem;
+        font-weight: bold;
+        color: black;
+    }
+}
+.row4{
+    font-size: 0.6rem;
+    color: rgb(196, 196, 196);
+    margin: 5% 0 2.5rem;
+}
+.card-3 .row3{
+    margin: 5% 0 2.5rem;
+}
+.col{
+    overflow: visible;
+}
+.row{
+    overflow: visible;
+}
+.clock{
+    font-size: 50px;
+ }
+ /*Per gjakove.html deri ktu*/
+
+ .prizren{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(238, 237, 237, 0.438);
+    color: rgb(105, 104, 104);
+    font-family: sans-serif;
+}
+.container
+{
+    width: fit-content;
+}
+.card{
+    padding: 1.2rem 3rem 1rem 3rem;
+    margin: 1rem;
+    border-radius: 1.5rem;
+    border-color: rgba(238, 237, 237, 0.438);
+    box-shadow: 5px 8px 10px #80808033;
+}
+@media(max-width:767px){
+    .card{
+        height: 10rem;
+        padding: 1.5rem 1.5rem 1rem 1.5rem;
+    }
+}
+.carousel-indicators li {
+    width: 5px;
+    height: 6px;
+    border-radius: 100%;
+    opacity: 0.2;
+    background-color: #000000;
+}
+.carousel-indicators{
+    margin-bottom: 0;
+}
+.temp{
+    font-size: 5rem;
+    color: rgb(57, 57, 58);
+}
+.card-1{
+    background: linear-gradient(to right, #ffffff 50%, rgba(241, 224, 190, 0.507));
+}
+@media(max-width:767px)
+{
+    .temp{
+        font-size: 3rem;
+    }
+}
+.location{
+    margin-bottom: 1.5rem;
+}
+@media(max-width:767px)
+{
+    .location{
+        font-size: 0.75rem;
+    }
+}
+.img-fluid{
+    float: right;
+    width: 65%;
+    display: flex;
+    align-items: center;
+}
+.row2 .img-fluid{
+    margin: 10% 0;
+    opacity: 0.5;
+    width: 40%;
+}
+.card-2 .row{
+    justify-content: center;
+}
+.card-3 .row{
+    justify-content: center;
+}
+.row1{
+    font-size: 0.7rem;
+    font-weight: bold;
+    color: black;
+}
+.row3{
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: black;
+}
+@media(max-width:400px)
+{
+    .row3{
+        font-size: 0.7rem;
+        font-weight: bold;
+        color: black;
+    }
+}
+@media(max-width:320px)
+{
+    .row3{
+        font-size: 0.6rem;
+        font-weight: bold;
+        color: black;
+    }
+}
+.row4{
+    font-size: 0.6rem;
+    color: rgb(196, 196, 196);
+    margin: 5% 0 2.5rem;
+}
+.card-3 .row3{
+    margin: 5% 0 2.5rem;
+}
+.col{
+    overflow: visible;
+}
+.row{
+    overflow: visible;
+}
+.clock{
+    font-size: 50px;
+ }
+ /*Per prizren.html deri ktu*/
+
+
+ @media screen and (max-width: 800px){
+    .Lz-panel, .Lz-container{
+        position: relative;
+        width: 100%;
+        top: initial;
+    }
+    
+}
+
+@media  screen and (max-width:500px) {
+    html{
+        font-size: 12px;
+    }  
+}
+
+@media screen and (max-height:300px){
+    .Lz-weather-app{
+        min-height: 40em;
+    }
+    
+}
+/*Pjesa resopnisive ktu*/
