@@ -137,6 +137,9 @@ h1, h3{
 .Lz-panel ul h4{
     margin: 3em 0;
 }
+.Lz-panel h4{
+    color: #fff;
+}
 
 .Lz-city{
     display: block;
@@ -153,6 +156,9 @@ h1, h3{
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+.Lz-details h4{
+    color:#fff;
 }
 /*Per index.html deri ktu*/
 
